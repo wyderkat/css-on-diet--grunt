@@ -1,0 +1,42 @@
+{
+  "name": "grunt-cssondiet",
+  "description": "Easy and fast CSS preprocessor",
+  "version": "0.1.0",
+  "homepage": "http://www.cofoh.com/css-on-diet",
+  "author": {
+    "name": "Tomasz Wyderka",
+    "email": "wyderkat@cofoh.com",
+    "url": "http://www.cofoh.com/user/tomasz-wyderka"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/wyderkat/grunt-cssondiet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wyderkat/grunt-cssondiet/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://www.cofoh.com/css-on-diet/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "^0.9.2",
+    "grunt-contrib-clean": "^0.5.0",
+    "grunt-contrib-nodeunit": "^0.3.3",
+    "grunt": "~0.4.5"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.5"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
