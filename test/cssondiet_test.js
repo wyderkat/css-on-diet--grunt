@@ -22,27 +22,34 @@ var grunt = require('grunt');
     test.ifError(value)
 */
 
+function one_to_one( test, actualname, expectedname ) {
+  test.expect(1);
+
+  if (! expectedname) {
+    expectedname = actualname;
+  }
+  var actual = grunt.file.read('tmp/'+actualname);
+  var expected = grunt.file.read('test/expected/'+expectedname);
+  test.equal(actual, expected, 'Actual result file different than Expected file');
+
+  test.done();
+}
+
+
 exports.cssondiet = {
   setUp: function(done) {
-    // setup here if necessary
     done();
   },
-  default_options: function(test) {
-    test.expect(1);
-
-    var actual = grunt.file.read('tmp/default_options');
-    var expected = grunt.file.read('test/expected/default_options');
-    test.equal(actual, expected, 'should describe what the default behavior is.');
-
-    test.done();
+  preprocess: function(test) {
+    one_to_one( test, 'preprocess.css' )
   },
-  custom_options: function(test) {
-    test.expect(1);
-
-    var actual = grunt.file.read('tmp/custom_options');
-    var expected = grunt.file.read('test/expected/custom_options');
-    test.equal(actual, expected, 'should describe what the custom option(s) behavior is.');
-
-    test.done();
+  multiple: function(test) {
+    one_to_one( test, 'multiple.css' )
+  },
+  minify: function(test) {
+    one_to_one( test, 'minify.css' )
+  },
+  include: function(test) {
+    one_to_one( test, 'include.css' )
   },
 };

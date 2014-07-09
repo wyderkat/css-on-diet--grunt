@@ -1,0 +1,27 @@
+
+body {
+  fos 12p
+  les 2p
+  // or just
+  letter-spacing: 2px;
+  /*  /* comment inside */ comment  */
+}
+
+@cod-defines {
+  C_Logo #430ca880
+  IMaaa url("tree.png")
+  BAR 100p
+}
+
+.element {
+  col C_Logo
+  ba- IMaaa nr ri to
+  mal BAR+10
+}
+
+
+
+
+
+
+

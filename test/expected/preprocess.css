@@ -1,0 +1,22 @@
+
+body {
+  font-size: 12px;
+  letter-spacing: 2px;
+  /* or just*/
+  letter-spacing: 2px;
+  /*  /* comment inside *-/ comment  */
+}
+
+
+.element {
+  color: rgba(67,12,168,0.502);
+  background: url("tree.png") no-repeat right top;
+  margin-left: 110px;
+}
+
+
+
+
+
+
+
