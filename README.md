@@ -1,9 +1,9 @@
 # grunt-cssondiet
 
-> GruntJS plugin which compiles [CSS-On-Diet](http://cofoh.com/css-on-diet) files to CSS. 
+> Grunt plugin which compiles [CSS-On-Diet](http://cofoh.com/css-on-diet) files to CSS. 
 
 
-## Standard Grunt info-section
+## Standard Grunt info
 
 This plugin requires Grunt `~0.4.5`
 
@@ -19,7 +19,7 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-cssondiet');
 ```
 
-## The CSS-On-Diet preprocessor and "cssondiet" Grunt task
+## The CSS-On-Diet preprocessor and "cssondiet" task
 
 [CSS-On-Diet](http://cofoh.com/css-on-diet) is a preprocessor for CSS files. The key feature are
 mnemonics for frequently used properties and value names, which are similar to Emmet abbreviations.
@@ -99,14 +99,14 @@ Additional directories paths to look for imported files (@cod-import rule).
 Type: `Boolean`  
 Default: `false`
 
-Extract comments from final CSS. Always on for `minify-css` option.
+Extract comments from final CSS. Always enabled for `minify-css` option.
 
 ### noHeader
 
 Type: `Boolean`  
 Default: `false`
 
-Don't add header line (banner) at the beginning of the CSS. Always on for `minify-css` option.
+Don't add header line (banner) at the beginning of the CSS. Always enabled for `minify-css` option.
 
 
 ## Release History
