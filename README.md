@@ -1,8 +1,10 @@
 # grunt-cssondiet
 
-> Easy and fast CSS preprocessor
+> GruntJS plugin which compiles [CSS-On-Diet](http://cofoh.com/css-on-diet) files to CSS. 
 
-## Getting Started
+
+## Standard Grunt info-section
+
 This plugin requires Grunt `~0.4.5`
 
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
@@ -17,73 +19,95 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-cssondiet');
 ```
 
-## The "cssondiet" task
+## The CSS-On-Diet preprocessor and "cssondiet" Grunt task
 
-### Overview
-In your project's Gruntfile, add a section named `cssondiet` to the data object passed into `grunt.initConfig()`.
+[CSS-On-Diet](http://cofoh.com/css-on-diet) is a preprocessor for CSS files. The key feature are
+mnemonics for frequently used properties and value names, which are similar to Emmet abbreviations.
+Other goodies include media breakpoints, optional colons and semicolons, nested and one line
+comments, variables and mixins, calculator, hexadecimal RGBA.
 
-```js
+Grunt task has name `cssondiet`.
+
+This task requires you to have [Python](https://www.python.org/download/)
+and [CSS-On-Diet](http://cofoh.com/css-on-diet) installed. If you're on OS X or Linux you probably
+already have Python installed; test with `python -V` in your terminal. When you've confirmed you have
+Python installed, run `pip install CSSOnDiet` to install CSS-On-Diet.
+Maybe you will need to install `pip` command before.
+
+
+## Examples
+
+### Example config
+
+```javascript
 grunt.initConfig({
+
+  cssondiet: {                         // Task
+    dist: {                            // Target
+      options: {                       // Target options
+        minifyCss: true       
+      },
+      files: {                         // Dictionary of files
+        'main.css': 'main.cod',        // 'destination': 'source' 
+        'widgets.css': 'widgets.cod'
+      }
+    }
+  }
+
+});
+
+grunt.loadNpmTasks('grunt-cssondiet');
+
+grunt.registerTask('default', ['cssondiet']);
+```
+
+## Compile from multiple sources
+
+CSS-On-Diet concatenates all source files, like they were included in some root-meta file
+
+```javascript
+grunt.initConfig({
+
   cssondiet: {
-    options: {
-      // Task-specific options go here.
-    },
-    your_target: {
-      // Target-specific file lists and/or options go here.
-    },
-  },
+    dist: {
+      files: {
+        'main.css': [ 'main.cod', 'side.cod' ]
+      }
+    }
+  }
+
 });
 ```
 
-### Options
+## Options
 
-#### options.separator
-Type: `String`
-Default value: `',  '`
+### minifyCss
 
-A string value that is used to do something with whatever.
+Type: `Boolean`  
+Default: `false`
 
-#### options.punctuation
-Type: `String`
-Default value: `'.'`
+Minifies final CSS file.
 
-A string value that is used to do something else with whatever else.
+### includeDirs
 
-### Usage Examples
+Type: `Array of Strings`
 
-#### Default Options
-In this example, the default options are used to do something with whatever. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result would be `Testing, 1 2 3.`
+Additional directories paths to look for imported files (@cod-import rule).
 
-```js
-grunt.initConfig({
-  cssondiet: {
-    options: {},
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
+### noComments
 
-#### Custom Options
-In this example, custom options are used to do something else with whatever else. So if the `testing` file has the content `Testing` and the `123` file had the content `1 2 3`, the generated result in this case would be `Testing: 1 2 3 !!!`
+Type: `Boolean`  
+Default: `false`
 
-```js
-grunt.initConfig({
-  cssondiet: {
-    options: {
-      separator: ': ',
-      punctuation: ' !!!',
-    },
-    files: {
-      'dest/default_options': ['src/testing', 'src/123'],
-    },
-  },
-});
-```
+Extract comments from final CSS. Always on for `minify-css` option.
 
-## Contributing
-In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [Grunt](http://gruntjs.com/).
+### noHeader
+
+Type: `Boolean`  
+Default: `false`
+
+Don't add header line (banner) at the beginning of the CSS. Always on for `minify-css` option.
+
 
 ## Release History
-_(Nothing yet)_
+ * 2014-07-11  v0.1.0  Initial
