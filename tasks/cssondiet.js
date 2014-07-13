@@ -30,9 +30,9 @@ module.exports = function(grunt) {
       which.sync( bin );
     } catch (err) {
       return grunt.warn(
-        '\nYou need to have Python and CSS-On-Diet Command Line Tool (cod)\n'
-       +'installed and in your PATH for this task to work.\n' 
-       +'More info: https://github.com/wyderkat/css-on-diet--grunt\n'
+        '\nYou need to have Python and CSS-On-Diet Command Line Tool (cod)\n'+
+        'installed and in your PATH for this task to work.\n' +
+        'More info: https://github.com/wyderkat/css-on-diet--grunt\n'
       );
     }
 

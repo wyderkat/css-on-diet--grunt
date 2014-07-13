@@ -41,15 +41,15 @@ exports.cssondiet = {
     done();
   },
   preprocess: function(test) {
-    one_to_one( test, 'preprocess.css' )
+    one_to_one( test, 'preprocess.css' );
   },
   multiple: function(test) {
-    one_to_one( test, 'multiple.css' )
+    one_to_one( test, 'multiple.css' );
   },
   minify: function(test) {
-    one_to_one( test, 'minify.css' )
+    one_to_one( test, 'minify.css' );
   },
   include: function(test) {
-    one_to_one( test, 'include.css' )
+    one_to_one( test, 'include.css' );
   },
 };

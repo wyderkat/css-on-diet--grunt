@@ -3,15 +3,25 @@
 > Grunt plugin which compiles [CSS-On-Diet](http://cofoh.com/css-on-diet) files to CSS. 
 
 
-## Standard Grunt info
+## "cssondiet" Grunt Task
 
-This plugin requires Grunt `~0.4.5`
-
-If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as install and use Grunt plugins. Once you're familiar with that process, you may install this plugin with this command:
-
+This plugin can be installed in your project directory by this command:
 ```shell
 npm install grunt-cssondiet --save-dev
 ```
+
+But it requires [CSS-On-Diet](http://cofoh.com/css-on-diet) preprocessor, which can be installed
+like this:
+```shell
+pip install CSSOnDiet
+```
+
+On some system that command (pip) will not be present. It should be installed with not too old
+Python version. But if you have old version [install it from
+here](https://pip.pypa.io/en/latest/installing.html).
+
+If you are new to [Grunt](http://gruntjs.com/) check out [Introduction
+page](http://gruntjs.com/getting-started)
 
 Once the plugin has been installed, it may be enabled inside your Gruntfile with this line of JavaScript:
 
@@ -19,14 +29,12 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('grunt-cssondiet');
 ```
 
-## The CSS-On-Diet preprocessor and "cssondiet" task
+## The CSS-On-Diet preprocessor
 
 [CSS-On-Diet](http://cofoh.com/css-on-diet) is a preprocessor for CSS files. The key feature are
 mnemonics for frequently used properties and value names, which are similar to Emmet abbreviations.
 Other goodies include media breakpoints, optional colons and semicolons, nested and one line
 comments, variables and mixins, calculator, hexadecimal RGBA.
-
-Grunt task has name `cssondiet`.
 
 This task requires you to have [Python](https://www.python.org/download/)
 and [CSS-On-Diet](http://cofoh.com/css-on-diet) installed. If you're on OS X or Linux you probably
@@ -40,25 +48,28 @@ Maybe you will need to install `pip` command before.
 ### Example config
 
 ```javascript
-grunt.initConfig({
+module.exports = function(grunt) {
+  grunt.initConfig({
 
-  cssondiet: {                         // Task
-    dist: {                            // Target
-      options: {                       // Target options
-        minifyCss: true       
-      },
-      files: {                         // Dictionary of files
-        'main.css': 'main.cod',        // 'destination': 'source' 
-        'widgets.css': 'widgets.cod'
+    cssondiet: {                         // Task
+      dist: {                            // Target
+        options: {                       // Target options
+          minifyCss: true       
+        },
+        files: {                         // Dictionary of files
+          'main.css': 'main.cod',        // 'destination': 'source' 
+          'widgets.css': 'widgets.cod'
+        }
       }
     }
-  }
 
-});
+  });
 
-grunt.loadNpmTasks('grunt-cssondiet');
+  grunt.loadNpmTasks('grunt-cssondiet');
 
-grunt.registerTask('default', ['cssondiet']);
+  grunt.registerTask('default', ['cssondiet']);
+
+};
 ```
 
 ## Compile from multiple sources
