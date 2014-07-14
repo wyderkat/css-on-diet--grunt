@@ -103,7 +103,7 @@ Minifies final CSS file.
 
 Type: `Array of Strings`
 
-Additional directories paths to look for imported files (@cod-import rule).
+Additional directories paths to look for imported files (@cod-include rule).
 
 ### noComments
 
@@ -121,4 +121,5 @@ Don't add header line (banner) at the beginning of the CSS. Always enabled for `
 
 
 ## Release History
+ * 2014-07-15  v0.1.1  Better warning messages. 
  * 2014-07-11  v0.1.0  Initial

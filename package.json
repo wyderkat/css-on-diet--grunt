@@ -1,7 +1,7 @@
 {
   "name": "grunt-cssondiet",
   "description": "Easy and fast CSS preprocessor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "http://www.cofoh.com/css-on-diet",
   "author": {
     "name": "Tomasz Wyderka",

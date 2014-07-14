@@ -32,7 +32,8 @@ module.exports = function(grunt) {
       return grunt.warn(
         '\nYou need to have Python and CSS-On-Diet Command Line Tool (cod)\n'+
         'installed and in your PATH for this task to work.\n' +
-        'More info: https://github.com/wyderkat/css-on-diet--grunt\n'
+        'Usually just "pip install CSSOnDiet" will do it.\n' +
+        'More info at http://cofoh.com/css-on-diet\n\n'
       );
     }
 
@@ -40,9 +41,14 @@ module.exports = function(grunt) {
 
     async.eachLimit(this.files, numCPUs, function (file, next) {
 
+      if ( !file.src.length ) {
+          grunt.warn('Some source file is missing.');
+          return next();
+      }
+
       file.src.forEach(function(f) {
         if (!grunt.file.exists(f)) {
-          grunt.log.warn('Source file "' + f + '" not found.');
+          grunt.warn('Source file "' + f + '" not found.');
           return next();
         }
       });
