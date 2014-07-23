@@ -31,10 +31,7 @@ grunt.loadNpmTasks('grunt-cssondiet');
 
 ## The CSS-On-Diet preprocessor
 
-[CSS-On-Diet](http://cofoh.com/css-on-diet) is a preprocessor for CSS files. The key feature are
-mnemonics for frequently used properties and value names, which are similar to Emmet abbreviations.
-Other goodies include media breakpoints, optional colons and semicolons, nested and one line
-comments, variables and mixins, calculator, hexadecimal RGBA.
+[CSS-On-Diet](http://cofoh.com/css-on-diet) is a preprocessor for CSS files. The key feature is mnemonics for frequently used properties, which are similar to Emmet abbreviations. Other goodies include intuitive media breakpoints, nested and single line comments, variables and mixins, a calculator, hexadecimal RGBA, minifier, ...
 
 This task requires you to have [Python](https://www.python.org/download/)
 and [CSS-On-Diet](http://cofoh.com/css-on-diet) installed. If you're on OS X or Linux you probably
@@ -121,5 +118,6 @@ Don't add header line (banner) at the beginning of the CSS. Always enabled for `
 
 
 ## Release History
+ * 2014-07-24  v0.1.2  Documentation update.
  * 2014-07-15  v0.1.1  Better warning messages. 
  * 2014-07-11  v0.1.0  Initial
