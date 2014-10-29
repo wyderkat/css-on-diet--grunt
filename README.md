@@ -1,6 +1,6 @@
 # grunt-cssondiet
 
-> Grunt plugin which compiles [CSS-On-Diet](http://cofoh.com/css-on-diet) files to CSS. 
+> Grunt plugin which compiles [CSS-On-Diet](http://cssondiet.com) files to CSS. 
 
 
 ## "cssondiet" Grunt Task
@@ -10,7 +10,7 @@ This plugin can be installed in your project directory by this command:
 npm install grunt-cssondiet --save-dev
 ```
 
-But it requires [CSS-On-Diet](http://cofoh.com/css-on-diet) preprocessor, which can be installed
+But it requires [CSS-On-Diet](http://cssondiet.com) preprocessor, which can be installed
 like this:
 ```shell
 pip install CSSOnDiet
@@ -31,10 +31,10 @@ grunt.loadNpmTasks('grunt-cssondiet');
 
 ## The CSS-On-Diet preprocessor
 
-[CSS-On-Diet](http://cofoh.com/css-on-diet) is a preprocessor for CSS files. The key feature is mnemonics for frequently used properties, which are similar to Emmet abbreviations. Other goodies include intuitive media breakpoints, nested and single line comments, variables and mixins, a calculator, hexadecimal RGBA, minifier, ...
+[CSS-On-Diet](http://cssondiet.com) is a preprocessor for CSS files. The key feature is mnemonics for frequently used properties, which are similar to Emmet abbreviations. Other goodies include intuitive media breakpoints, nested and single line comments, variables and mixins, a calculator, hexadecimal RGBA, minifier, ...
 
 This task requires you to have [Python](https://www.python.org/download/)
-and [CSS-On-Diet](http://cofoh.com/css-on-diet) installed. If you're on OS X or Linux you probably
+and [CSS-On-Diet](http://cssondiet.com) installed. If you're on OS X or Linux you probably
 already have Python installed; test with `python -V` in your terminal. When you've confirmed you have
 Python installed, run `pip install CSSOnDiet` to install CSS-On-Diet.
 Maybe you will need to install `pip` command before.
@@ -118,6 +118,7 @@ Don't add header line (banner) at the beginning of the CSS. Always enabled for `
 
 
 ## Release History
+ * 2014-10-29  v0.1.3  A new website link.
  * 2014-07-24  v0.1.2  Documentation update.
  * 2014-07-15  v0.1.1  Better warning messages. 
  * 2014-07-11  v0.1.0  Initial

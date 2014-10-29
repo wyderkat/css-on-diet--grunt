@@ -1,6 +1,6 @@
 /*
  * grunt-cssondiet
- * http://www.cofoh.com/css-on-diet
+ * http://cssondiet.com
  *
  * Copyright (c) 2014 Tomasz Wyderka
  * Licensed under the MIT license.
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
         '\nYou need to have Python and CSS-On-Diet Command Line Tool (cod)\n'+
         'installed and in your PATH for this task to work.\n' +
         'Usually just "pip install CSSOnDiet" will do it.\n' +
-        'More info at http://cofoh.com/css-on-diet\n\n'
+        'More info at http://cssondiet.com\n\n'
       );
     }
 

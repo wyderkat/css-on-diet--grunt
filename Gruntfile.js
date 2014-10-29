@@ -1,6 +1,6 @@
 /*
  * grunt-cssondiet
- * http://www.cofoh.com/css-on-diet
+ * http://cssondiet.com
  *
  * Copyright (c) 2014 Tomasz Wyderka
  * Licensed under the MIT license.
