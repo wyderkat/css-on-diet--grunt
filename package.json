@@ -1,7 +1,7 @@
 {
   "name": "grunt-cssondiet",
   "description": "Easy and fast CSS preprocessor",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "homepage": "http://cssondiet.com",
   "author": {
     "name": "Tomasz Wyderka",

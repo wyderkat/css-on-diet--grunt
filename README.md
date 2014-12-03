@@ -118,6 +118,7 @@ Don't add header line (banner) at the beginning of the CSS. Always enabled for `
 
 
 ## Release History
+ * 2014-12-03  v0.1.4  Mnemonics updated
  * 2014-10-29  v0.1.3  A new website link.
  * 2014-07-24  v0.1.2  Documentation update.
  * 2014-07-15  v0.1.1  Better warning messages. 
